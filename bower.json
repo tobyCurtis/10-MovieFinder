@@ -1,0 +1,15 @@
+{
+  "name": "10-MovieFInder",
+  "authors": [
+    "Toby <curti024@csusm.edu>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular-ui-router": "^0.2.18",
+    "bootstrap": "^3.3.6",
+    "toastr": "^2.1.2"
+  }
+}
