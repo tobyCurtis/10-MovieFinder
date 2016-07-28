@@ -1,21 +1,11 @@
-body {
-	background-image: url("background.jpg");
-}
 
-* {
-	font-family: 'IM Fell DW Pica';
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 26.4px;
-}
 
 .container-fluid {
     margin: 50px;
 }
 
 #mainBackground {
-	background-color: black;
+	background-color: rgba(0, 0, 0, 0.8);
 	padding: 50px;
 }
 

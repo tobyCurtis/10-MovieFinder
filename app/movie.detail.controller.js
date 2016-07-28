@@ -13,24 +13,34 @@
     function DetailController($log, MovieFactory, $stateParams) {
         var vm = this;
         vm.title = 'DetailController';
-        
+
+        var url = "http://www.omdbapi.com/?t=" + $stateParams.movieName;
+
+        MovieFactory.getMovies(url).then(
+            function(response) {
+                vm.movies = response.data;
+                console.log(vm.movies);
+                // console.log(vm.movies);
+            },
+            function(error) {
+                $log.error(error);
+            });
 
 
-            var first = "http://www.omdbapi.com/?t=";
-            var url = first + $stateParams.movieName;
+        var url2 = "http://trailersapi.com/trailers.json?movie=" + $stateParams.movieName + "& limit=1&width=320";
 
-            MovieFactory.getMovies(url).then(
-                function(response) {
-                    vm.movies = response.data;
-                    console.log(vm.movies);
-                    // console.log(vm.movies);
-                },
-                function(error) {
-                    $log.error(error);
-                });
+         MovieFactory.getMovies(url2).then(
+            function(response) {
+                vm.trailer = response.data;
+                console.log(vm.trailer);
+                // console.log(vm.movies);
+            },
+            function(error) {
+                $log.error(error);
+            });
 
 
-    
+
 
 
     }

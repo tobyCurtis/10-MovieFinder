@@ -17,7 +17,7 @@
               url: "/main",
               templateUrl: "app/partials/main.html",
               controller: "MainController as vm"
-            
+             
             })
             .state('state1', {
               url: "/state1/:movieName",
